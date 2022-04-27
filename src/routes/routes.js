@@ -2,6 +2,7 @@
 import Home from "../views/Home";
 import About from "../views/About";
 import Login from "../views/Login";
+import Dashboard from "../views/Dashboard";
 
 const routes = [
   {
@@ -10,10 +11,13 @@ const routes = [
   },{
     "path": "/about",
     "element" : <About/>
-  },,{
+  },{
     "path": "/login",
     "element" : <Login/>
-  },
+  },{
+    "path": "/dashboard",
+    "element" : <Dashboard/>
+  }
 ];
 
 export default routes;
