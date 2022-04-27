@@ -7,7 +7,7 @@ const Login = () => {
   const [data, setDatos] = useState({
     user: "",
     pass: "",
-    isLogged: 1,
+    isLogged: 0,
   });
 
   useEffect(() => {
