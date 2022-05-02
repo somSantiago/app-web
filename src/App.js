@@ -3,9 +3,10 @@ import "./App.css";
 import Router from "./routes/Router";
 
 function App() {
+
+
   return (
-    <div className="App">
-      <h1>Welcome to React Router!</h1>
+    <div className="App has-background-grey-lighter">
       <Router/>
     </div>
   );
