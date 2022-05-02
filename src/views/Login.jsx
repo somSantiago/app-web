@@ -1,5 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import login from "../services/login";
+import routes from "../routes/routes.json";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -7,14 +9,14 @@ const Login = () => {
   const [data, setDatos] = useState({
     user: "",
     pass: "",
-    isLogged: 0,
+    isLogged: login.isLoged(),
   });
 
   useEffect(() => {
     if (data.isLogged) {
-      navigate("/dashboard");
+      navigate(routes.HOME_PAGE);
     }
-  });
+  },[]);
 
   const handleInputChange = (event) => {
     setDatos({
@@ -26,7 +28,8 @@ const Login = () => {
   const sendData = (event) => {
     event.preventDefault();
     console.log("enviando datos..." + data.user + " " + data.pass);
-    navigate("/dashboard");
+    login.setToken();
+    navigate("/");
   };
 
   return (
